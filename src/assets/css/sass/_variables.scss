@@ -1,0 +1,27 @@
+//Typography
+$main-font: 'IntelOne Display', sans-serif;
+$second-font: 'IntelOne Text', sans-serif;
+
+$fontSizeBase: 16px;
+$lineHeightBase:18px;
+
+//Colors
+$color-white: #fff;
+$color-black: #333;
+
+//Transition Time
+$transitionSpeed: 500ms;
+
+//Breakpoints
+$mobileMin: 320px;
+$mobileMax: 414px;
+$xs: 568px; //<576px
+$sm: 768px; //<768px
+$sm2: 850px;
+$md: 992px;
+$md2: 1130px;
+$lg: 1200px; //<1200px
+$desktopMax: 1366px;
+$xlg: 1500px;
+$xlg2: 1780px;
+$fullHD: 1920px;

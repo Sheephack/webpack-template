@@ -1,0 +1,21 @@
+//Scrollbar style changer
+
+$scroll-shadow-color: #ff0000; 
+$background-color: #999;
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px $scroll-shadow-color;
+    background: $background-color;
+    border-radius: 1px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $scroll-shadow-color;
+    border-radius: 1px;
+  }

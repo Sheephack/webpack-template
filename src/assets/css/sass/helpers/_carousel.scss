@@ -1,0 +1,333 @@
+$spinner-bg: #fff;
+$spinner-color: #000;
+$spinner-color-secondary: #f1e7f9;
+
+//Change ID according to wrapper
+//Arrows need to be completed
+#productos1,#productos2,#productos3,#productos4 {
+  .carousel-on {
+      position: relative;
+  }
+  .productos-on {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+
+        @media (min-width:$sm){
+            margin-left: 17px;
+            margin-right: 17px;
+        }
+        @media (min-width:$lg){
+            margin-left: auto;
+            margin-right: auto;
+        }
+  }
+
+  .item-on {
+    margin-left: auto;
+    margin-right: auto;
+    //   position: absolute;
+      left: 0;
+      height: 0;
+      opacity: 0;
+      transition: transform 200ms, opacity 200ms;
+
+      &.active-1 {
+          transform: translateX(-100%);
+          opacity: 0;
+          pointer-events: none;
+      }
+
+      &.active {
+          transform: translateX(0);
+          opacity: 1;
+          pointer-events: all;
+        //   height: 100%;
+        min-height: 500px;
+        //   OJO CON ESTA ALTURA
+        @media (min-width:370px){
+            min-height: 550px;
+        }
+        @media (min-width:390px){
+            min-height: 570px;
+        }
+        @media (min-width:410px){
+            min-height: 590px;
+        }
+        @media (min-width:450px){
+            min-height: 640px;
+        }
+        @media (min-width:500px){
+            min-height: 690px;
+        }
+        @media (min-width:530px){
+            min-height: 720px;
+        }
+        @media (min-width:580px){
+            min-height: 770px;
+        }
+        @media (min-width:620px){
+            min-height: 810px;
+        }
+        @media (min-width:650px){
+            min-height: 860px;
+        }
+        @media (min-width:720px){
+            min-height: 930px;
+        }
+        @media (min-width:$sm){
+            min-height: 543px;
+        }
+        @media (min-width:800px){
+            min-height: 600px;
+        }
+        @media (min-width:910px){
+            min-height: 620px;
+        }
+        @media (min-width:935px){
+            min-height: 650px;
+        }
+        @media (min-width:1000px){
+            min-height: 670px;
+        }
+        @media (min-width:1050px){
+            min-height: 700px;
+        }
+        @media (min-width:1100px){
+            min-height: 715px;
+        }
+        @media (min-width:$md2){
+            min-height: 800px;
+        }
+        @media (min-width:$lg){
+            min-height: 615px;
+        }
+        // @media (min-width:1100px){
+        //     min-height: 715px;
+        // }
+        // @media (min-width:1100px){
+        //     min-height: 715px;
+        // }
+        @media (min-width:$desktopMax){
+            min-height: 615px;
+        }
+      }
+
+      &.active1 {
+          transform: translateX(100%);
+          opacity: 0;
+          pointer-events: none;
+          @media (min-width: $sm) {
+              pointer-events: all;
+              transform: translateX(100%);
+              opacity: 1;
+          }
+      }
+
+      &.active2 {
+          transform: translateX(200%);
+          opacity: 0;
+          pointer-events: none;
+          @media (min-width: $md) {
+              pointer-events: all;
+              transform: translateX(200%);
+              opacity: 1;
+          }
+      }
+
+      &.active3 {
+          transform: translateX(200%);
+          opacity: 0;
+          pointer-events: none;
+          @media (min-width: $md) {
+              transform: translateX(300%);
+          }
+          @media (min-width: $lg) {
+              pointer-events: all;
+              opacity: 1;
+          }
+      }
+
+      &.active4 {
+          opacity: 0;
+          pointer-events: none;
+          @media (min-width: $lg) {
+              pointer-events: all;
+              transform: translateX(400%);
+          }
+      }
+        
+      &.active-out-right {
+            opacity: 0;
+            transform: translateX(500%);
+        }
+  }
+
+  .item-on-1 {
+     width: 100%;
+    }
+
+    .item-on-2 {
+        width: 50%;
+    }
+
+    .item-on-3 {
+        width: 33.3%;
+    }
+
+    .item-on-4 {
+        width: 25%;
+    }
+
+
+  .nav-wrapper {
+      button {
+        z-index: 1000;
+          position: absolute;
+          top: 35%;
+          cursor: pointer;
+          outline: none;
+          border: none;
+          transition: all 500ms;
+          opacity: 1;
+          display: block;
+          width: 27px;
+          height: 27px;
+        //   background-image: url('../images/ -mb.png');
+        //   background-size: 12.5px 21.2px;
+          background-repeat: no-repeat;
+          background-position: center;
+        //   @include image-2x('../images/ -mb@2x.png', cover);
+        //   @include image-3x('../images/ -mb@3x.png', cover);
+        
+          @media (min-width:$sm){
+            top: 37%;
+            // background-image: url('../images/ -tb.png');
+            background-position: center;
+            // @include image-2x('../images/ -tb@2x.png', cover);
+            // @include image-3x('../images/ -tb@3x.png', cover);
+            width: 37px;
+            height: 37px;
+          }
+
+        @media (min-width:$lg){
+            // background-image: url('../images/s -dt.png');
+            // @include image-2x('../images/ -dt@2x.png', cover);
+            // @include image-3x('../images/ -dt@3x.png', cover);
+            width: 46px;
+            height: 46px;
+            top: 40%;
+        }
+
+          &:focus {
+              border: none;
+              outline: none;
+          }
+          &:active {
+              border: none;
+              outline: none;
+          }
+
+          &:focus {
+              transition: all 500ms;
+              opacity: .7;
+          }
+
+          &.nav-left {
+              left: 0;
+              
+              transform: translateY(-50%) rotate(180deg);
+          }
+
+          &.nav-right {
+              right: 0;
+              transform: translateY(-50%);
+          }
+      }
+  }
+
+  .bullets-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 16px auto;
+      width: 100%;
+      max-width: 480px;
+
+      li {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border: 1px solid black;
+          cursor: pointer;
+          transition: all 500ms;
+
+          &.active {
+              transition: all 500ms;
+              background-color: black;
+          }
+      }
+
+  }
+      /*****LOADER******/
+    .container_loader {
+        position: absolute;
+        display: list-item;
+        height: 672px;
+        width: 100%;
+        background:$spinner-bg;
+        z-index: 999;
+        @media only screen and (min-width: $xs){
+            height: 779px;
+        }
+        @media only screen and (min-width: $md2){
+            height: 1009px;
+        }
+        @media only screen and (min-width: $lg){
+            height: 924px;
+        }
+        
+        .loader{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            left: 40%;
+            top: 50%;
+            animation: spin 1.2s
+                linear infinite;
+            @media only screen and (min-width: $sm){
+                left: 45%;
+            }
+        }
+
+        .loader::before,
+        .loader::after {
+            content: '';
+            position: absolute;
+            border-radius: inherit;
+        }
+
+        .loader::before {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(0deg, $spinner-color 0%, $spinner-color-secondary 100%);
+        }
+
+        .loader::after {
+            width: 85%;
+            height: 85%;
+            background-color: $spinner-bg;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

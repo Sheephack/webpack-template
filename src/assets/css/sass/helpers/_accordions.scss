@@ -1,0 +1,143 @@
+//Replace .button1 for actual name of the container
+//Arrows need to be completed or eliminated
+
+.button1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion {
+    margin-top: 16px;
+    color: $color-white;
+    cursor: pointer;
+    padding: 18px;
+    width: 200px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    min-height: 50px;
+    font-weight: 500;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    // display: flex;
+
+    @media only screen and (min-width: $sm) {
+        width: 268px;
+        height: 68px;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 23px;
+        margin-top: unset;
+        padding: 16px;
+    }
+    @media only screen and (min-width: $md2) {
+        width: 260px;
+        height: 96px;
+        font-size: 22px;
+        padding-top: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: 21px;
+        line-height: 25px;
+    }
+    @media only screen and (min-width: $lg) {
+        font-size: 20px;
+        line-height: 22px;
+        margin-top: unset;
+        padding-top: 16px;
+        width: 300px;
+        height: unset;
+    }
+
+    &:before {
+        content: '';
+        // position: absolute;
+        // display: block;
+        // background: url(../images/ -mb.png) no-repeat;
+        // @include image-2x("../images/ -mb@2x.png", contain);
+        // @include image-3x("../images/ -mb@3x.png", contain);
+        background-position: center;
+        float: left;
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: -10px;
+        @media only screen and (min-width: $md2) {
+           transform: translateY(7px);
+        }
+    }
+    &:hover{
+        // background-color: $color-borde;
+    }
+}
+.active:before {
+    content: "";
+    // background: url(../images/ -expand-mb.png) no-repeat;
+    // @include image-2x("../images/ -expand-mb@2x.png", contain);
+    // @include image-3x("../images/ -expand-mb@3x.png", contain);
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: -10px;
+}
+.panel {
+    padding-left: 18.8px;
+    padding-right: 12.2px;
+    max-height: 0;
+    width: 200px;
+    overflow: hidden;
+    // margin-top: 10px;
+    transition: max-height 0.2s ease-out;
+
+    @media only screen and (min-width: $sm) {
+        width: 268px;
+        padding-right: 63.2px;
+        margin-top: unset;
+    }
+    @media only screen and (min-width: $md2) {
+        width: 260px;
+    }
+    @media only screen and (min-width: $lg) {
+        padding-right: 23px;
+        width: 305px;
+    }
+
+    &__text{
+        font-family: $main-font;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 12px;
+        color: $color-white;
+        // width: 134px;
+
+        @media only screen and (min-width: $sm){
+            font-size: 12px;
+            line-height: 14px;
+            width: unset;
+        }
+        @media only screen and (min-width: $lg){
+            font-size: 14px;
+            line-height: 16px;
+            margin-left: unset;
+        }
+        .bolder{
+            font-weight: 700;
+        }
+
+        .sup2{
+            font-size: 8px;
+            @media only screen and (min-width:$sm){
+                font-size: 10px;
+            }
+        }
+    }
+
+    .text-modified{
+        width: 227.2px;
+    }
+}
